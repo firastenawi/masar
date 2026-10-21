@@ -1,0 +1,33 @@
+@import "@fontsource/ibm-plex-sans-arabic/400.css";
+@import "@fontsource/ibm-plex-sans-arabic/600.css";
+@import "@fontsource/ibm-plex-sans-arabic/700.css";
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-50: #eef5fb;
+  --color-brand-100: #dce9f5;
+  --color-brand-600: #2b6ca8;
+  --color-brand-700: #1f4e79;
+  --color-brand-900: #10283f;
+}
+
+/* الوضع الداكن يتبع إعداد النظام */
+@custom-variant dark (@media (prefers-color-scheme: dark));
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
+}
+
+/* كتل الكود تبقى دائماً من اليسار لليمين */
+code,
+pre {
+  direction: ltr;
+  unicode-bidi: isolate;
+}

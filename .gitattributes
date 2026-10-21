@@ -1,0 +1,11 @@
+# نهايات أسطر موحّدة (LF) لكل ملفات النص، حتى لا تظهر فروق وهمية بين Windows وغيره
+* text=auto eol=lf
+
+# سكربتات PowerShell و cmd تبقى CRLF كما يتوقعها Windows
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+
+*.png binary
+*.ico binary
+*.woff binary
+*.woff2 binary
